@@ -6,6 +6,7 @@ void setup()
 	for(int i = 0; i < gamer.length; i++)
 		gamer[i] = new Particle();
 	gamer[999] = new OddballParticle();
+
 }
 void draw()
 {
@@ -58,12 +59,17 @@ class OddballParticle extends Particle
 		fill(0);
 		ellipse((float)x-20, (float)y-10, 10, 10);
 		ellipse((float)x+20, (float)y-10, 10, 10);
+		fill(128);
+		rect((float)x-17.5, (float)y+8, 35, 7);
 		noFill();
 		stroke(0);
+		strokeWeight(5);
+		arc((float)x, (float)y+15, 40, 40, 0.5, PI-0.5, OPEN);
 		strokeWeight(3);
 		ellipse((float)x-20, (float)y-10, 20, 20);
 		ellipse((float)x+20, (float)y-10, 20, 20);
 		line((float)x-10, (float)y-10, (float)x+10, (float)y-10);
+
 
 	}
 }
